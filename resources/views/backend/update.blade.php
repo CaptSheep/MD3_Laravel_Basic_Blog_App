@@ -26,7 +26,7 @@
             <input type="text" class="form-control" id="content" name="content" value="{{$blogs->content}}">
         </div>
         <div>
-            <input type="submit" value="Update Blog">
+            <input type="submit" value="Update Blog" class="btn btn-danger">
         </div>
         <div>
             <a href="{{route('index')}}" class="btn btn-primary">Back</a>

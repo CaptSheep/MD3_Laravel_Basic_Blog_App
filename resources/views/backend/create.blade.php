@@ -26,7 +26,7 @@
             <input type="text" class="form-control" id="content" name="content">
         </div>
         <div>
-            <input type="submit" value="Create Blog">
+            <input type="submit" value="Create Blog" class="btn btn-success">
         </div>
         <div>
             <a href="{{route('index')}}" class="btn btn-primary">Back</a>
