@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('index');
 });
 Route::get('/index',[BlogController::class,'index'])->name('index');
 Route::get('/create',[BlogController::class,'create'])->name('create');

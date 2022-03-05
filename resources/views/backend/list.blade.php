@@ -1,3 +1,6 @@
+@extends('welcome')
+@section('title', 'Danh sách Blog')
+@section('content')
 <!doctype html>
 <html lang="en">
 <head>
@@ -36,3 +39,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
 </body>
 </html>
+@endsection
