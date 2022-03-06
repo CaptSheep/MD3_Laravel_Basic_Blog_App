@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RequestForm;
 use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class BlogController extends Controller
 {
@@ -21,7 +23,7 @@ class BlogController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(RequestForm $request)
     {
         $data = new Blog();
         $data->name = $request->input('name');
@@ -46,7 +48,7 @@ class BlogController extends Controller
     }
 
 
-    public function update(Request $request, $id)
+    public function update(RequestForm $request, $id)
     {
         $blogs = Blog::all()->where('id', $id)->first();
         $blogs->name = $request->input('name');
