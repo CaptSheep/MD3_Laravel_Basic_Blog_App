@@ -17,14 +17,24 @@
             <label class="control-label" for="name">Name</label>
             <input type="text" class="form-control" id="name" aria-describedby="usernameStatus" name="name" value="{{$blogs->name}}">
         </div>
+        @if($errors->any())
+            <p style="color: red">{{$errors->first('name')}}</p>
+        @endif
+
         <div class="form-group has-warning has-feedback">
             <label class="control-label" >Title</label>
             <input type="text" class="form-control" id="title" name="title" value="{{$blogs->title }}">
         </div>
+        @if($errors->any())
+            <p style="color: red">{{$errors->first('title')}}</p>
+        @endif
         <div class="form-group has-warning has-feedback">
             <label class="control-label" >Content</label>
             <input type="text" class="form-control" id="content" name="content" value="{{$blogs->content}}">
         </div>
+        @if($errors->any())
+            <p style="color: red">{{$errors->first('content')}}</p>
+        @endif
         <div>
             <input type="submit" value="Update Blog" class="btn btn-danger">
         </div>

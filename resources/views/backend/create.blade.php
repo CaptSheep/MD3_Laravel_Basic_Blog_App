@@ -18,7 +18,11 @@
             <input type="text" class="form-control" id="name" aria-describedby="usernameStatus" name="name">
         </div>
             <div class="error-message">
-
+{{--                @if ($errors->any())--}}
+{{--                    @foreach($errors->all() as $nameError)--}}
+{{--                        <p style="color:red">{{ $nameError }}</p>--}}
+{{--                    @endforeach--}}
+{{--                @endif--}}
                 @if($errors->any())
                 <p style="color: red">{{$errors->first('name')}}</p>
                 @endif
