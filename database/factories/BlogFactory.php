@@ -1,7 +1,9 @@
 <?php
+
 namespace Database\Factories;
 
 use App\Models\Blog;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,9 +19,10 @@ class BlogFactory extends Factory
     public function definition()
     {
         return [
-            'name'=>$this->faker->name(),
-            'title'=> $this->faker->text(255),
-            'content'=>$this->faker->text(255)
+            'name' => $this->faker->name(),
+            'category_id' => Category::all()->random()->id,
+            'title' => $this->faker->title,
+            'content' => $this->faker->text
         ];
     }
 }
